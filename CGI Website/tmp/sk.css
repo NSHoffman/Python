@@ -1,0 +1,788 @@
+/********************************
+BASIC SETTINGS
+*********************************/
+
+@font-face {
+    font-family: VCR;
+    src: url("fonts/VCR_OSD_MONO_1.001.ttf");
+}
+
+@font-face {
+    font-family: Upheaval;
+    src: url("fonts/upheavtt.ttf");
+}
+
+@font-face {
+    font-family: Lazer84;
+    src: url("fonts/Lazer84.ttf");
+}
+
+html {
+	min-height: 100%;
+}
+
+body, .main-wrapper {
+	min-height: 100vh;
+	height: 100%;
+}
+
+footer, header {
+	flex-shrink: 0;
+}
+
+body {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+    background: url('bg.jpg') center center;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+    text-align: justify;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-family: sans-serif;
+	font-size: 0.9em;
+}
+
+:hover, :active, :focus {
+	outline: none;
+}
+
+h3,h4,h5,h6 {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+	font-size: 4.235em;
+	font-family: Lazer84, sans-serif;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 2.617em;
+	font-family: Lazer84, sans-serif;
+	font-weight: normal;
+}
+
+h3 {
+	font-size: 1.618em;
+}
+
+h4 {
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 5px;
+	background: white;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+    color: black;
+}
+
+p.red {
+	color: #ff4646;
+	font-weight: bold;
+}
+
+p.green {
+	color: #09B24D;
+	font-weight: bold;
+}
+
+span.bold {
+	font-weight: bold;
+}
+
+span.imp {
+	font-weight: bold;
+	font-style: italic;
+	background: #edeff0;
+}
+
+.top-nav a.active {
+	color: white;
+}
+
+/********************************
+HEADER BAR
+*********************************/
+
+.pendosteam-logo {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: auto 0;
+}
+
+.top-nav {
+    list-style: none;
+    float: right;
+}
+
+.top-nav li {
+	vertical-align: middle;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.top-nav a {
+	font-family: 'Raleway' , sans-serif;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	color: #7d7d7d;
+	transition: color .3s ease-out;
+}
+
+.top-nav a:hover {
+	color: white;
+}
+
+.bar {
+    background: #161616;
+    box-shadow: 0 0 30px 0 black;
+    border-bottom: 5px solid #2d2d2d;
+    width: 100%;
+    height: 50px;
+    padding: 5px 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+
+.header-content {
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.header-content::after {
+    content:'';
+    display: block;
+    clear:both;
+    height: 0;
+}
+
+/********************************
+HEADER
+*********************************/
+
+header {
+	margin-top: 50px;
+    width:100%;
+    height: 400px;
+    background:url('5.jpg') center top;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 10px;
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+	background-size: 1800% 1800%;
+  	animation: rainbow 18s linear infinite;
+}
+
+.pendos {
+    font-family: Upheaval, sans-serif;
+    font-weight: 400;
+    font-size: 4em;
+    margin-bottom: 0;
+    color: white;
+    transform: none;
+}
+
+.lads {
+    font-family: VCR, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+    margin: 0;
+    color: black;
+    background: white;
+}
+.gradient {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, black);
+}
+
+.page-heading {
+    color: white;
+    animation: 2s linear 0s infinite rotate_text;
+}
+
+.pendos::before {
+    display: block;
+    content: attr(data-text);
+    position: absolute;
+    background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: translate(-4px,3px);
+    z-index: -1;
+}
+
+/********************************
+MAIN CONTENT
+*********************************/
+
+.main-wrapper {
+	width: 1080px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	background: white;
+}
+
+.body-wrapper {
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+.body-wrapper::after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.left {
+	float: left;
+    width:50%;
+    margin: 20px 1.7% 20px 3.3%;
+}
+
+.regform {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    vertical-align: top;
+    width: 90%;
+    margin: 20px auto;
+    padding: 5%;
+    background: repeating-linear-gradient(-45deg, white, white 35%, transparent 35%, transparent 65%), linear-gradient(115.5557500773333deg, rgba(255, 69, 177,1) 1.6197916666666674%,rgba(254, 68, 177,1) 1.6197916666666674%,rgba(109, 6, 199,1) 101.828125%);
+    border-radius: 10px;
+}
+
+.regform input {
+	width: 100%;
+	margin: 3px 0;
+	background: white;
+	border: none;
+	border-left: 0 solid transparent;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1em;
+	color: black;
+	text-align: center;
+	transition: border-left-width .3s ease, border-color .3s ease;
+
+}
+
+.regform input[type="Submit"] {
+	display: block;
+	padding: 5px;
+	font-weight: bold;
+	width: 50%;
+	color: white;
+	background: #161616;
+	border: none;
+	transition: background .3s ease;
+}
+
+.regform input[type="Submit"]:hover {
+	background: #46dd46;
+}
+
+.regform input:focus {
+	border-color: #46cc46;
+	border-left-width: 0.6em;
+}
+
+.right {
+    float: right;
+    width:40%;
+    margin: 20px 3.3% 20px 1.7%;
+}
+
+/********************************
+MUSICIANS
+*********************************/
+
+#prev {
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin-top: 10px;
+}
+
+#description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.75);
+}
+
+#list-info p {
+	color: white;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#list-info span {
+	color: #ff4646;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#prev-bg {
+	width: 100%;
+	height: 100%;
+}
+
+#rate {
+	width: 90%;
+	height: 300px;
+	margin: auto;
+	position: relative;
+	top: -50px;
+	filter: grayscale(1);
+	transition: transform .5s ease, filter .5s ease;
+}
+
+#rate:hover {
+	transform: scale(1.03);
+	filter: none;
+}
+
+#info-frame {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+}
+
+#stat-bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #46dd46;
+	height: 0.3em;
+}
+
+#like {
+	position: absolute;
+	top: -1em;
+	left: -1em;
+}
+
+#dislike {
+	position: absolute;
+	top: -1em;
+	right: -1em;
+}
+
+#info-ratings {
+	padding: 5%;
+	width: 80%;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-size: 1em;
+	text-transform: uppercase;
+	margin: auto;
+}
+
+#like input[type="submit"], #dislike input[type="submit"] {
+	display: block;
+	font-size: 1em;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	padding: 1em;
+	border-radius: 0.5em;
+	color: #edeff0;
+	background: #2d2d2d;
+	border: none;
+	transition: color .5s ease, text-shadow .5s ease;
+}
+
+#like input[type="submit"]:hover {
+	color: #46dd46;
+	text-shadow: 0 0 0.5em #46dd46;
+}
+
+#dislike input[type="submit"]:hover {
+	color: #ff4646;
+	text-shadow: 0 0 0.5em #ff4646;
+}
+
+#music {
+	width: 90%;
+	margin: auto;
+	border-radius: 0.5em;
+}
+
+.song {
+	width: 98%;
+	padding: 1%;
+}
+
+#info-ratings span {
+	font-size: 0.9em;
+	font-weight: bold;
+	margin-right: 0.5em;
+}
+
+.song audio {
+	width: 100%;
+}
+
+.song-caption {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: #161616;
+}
+
+/********************************
+SEARCH RESULTS / MUSIC MENU
+*********************************/
+
+.content-wrapper {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0 5%;
+	position: relative;
+	top: -40px;
+}
+
+.search-item {
+	display: block;
+	position: relative;
+	width: 324px;
+	height: 324px;
+	filter: grayscale(100%);
+	transition: filter .3s ease-out, transform .3s ease-out; 
+}
+
+.search-item:hover {
+	filter: none;
+	transform: scale(0.95);
+}
+
+.search-item p {
+	margin: 0;
+	padding: 1em 0;
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	color: white;
+	font-family: Lazer84, sans-serif;
+	font-size: 1.5em;
+}
+
+.search-item p span {
+	font-family: VCR, sans-serif;
+	text-transform: uppercase;
+	font-size: 0.55em;
+	color: #ff4646;
+}
+
+.search-n-filter {
+	display: block;
+	position: absolute;
+	top: -20px;
+	left: 0;
+	background: #181818;
+	width: 95%;
+	padding: 1% 2.5%;
+	z-index: 2;
+}
+
+.search {
+	float: left;
+	width: 60%;
+}
+
+.search-n-filter input, .filter-button {
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.15em;
+	padding: 1%;
+	border: none;
+}
+
+.filter {
+	float: right;
+	width: 40%;
+	text-align: right;
+}
+
+.search-input {
+	width: 70%;
+}
+
+.search-button, .filter-button {
+	background: #3d3d3d;
+	color: white;
+	transition: background .2s ease-out;
+}
+
+.search-button:hover {
+	background: #46cc46;
+}
+
+.filter-button:hover {
+	background: #ff4646;
+}
+
+.search-n-filter::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.not-found {
+	margin-top: 100px;
+	width: 100%;
+	font-size: 1.7em;
+	text-align: center;
+}
+
+.foqu {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.request {
+	color: #ff4646;
+	font-weight: bold;
+}
+
+
+/********************************
+FOOTER
+*********************************/
+
+footer {
+	font-size: 0.7em;
+	width: 100%;
+	background: black;
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 5px solid black;
+}
+
+footer p {
+	font-family: VCR, sans-serif;
+	color: white;
+}
+
+.tablelab {
+	width: 100%;
+	background: #161616;
+}
+
+.labs {
+	display: block;
+	width:60%;
+	list-style: none;
+	margin: 0 auto;
+	text-decoration: none;
+	background: #161616;
+}
+
+.labs::after {
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.labs a {
+	display: block;
+	text-align: center;
+	margin: 0;
+	float: left;
+	width: calc(100%/3);
+	overflow: hidden;
+}
+
+.labs a img {
+	display: block;
+	filter: grayscale(100%);
+	width: 100%;
+	transition: filter .3s ease, transform 1s ease;
+}
+
+.labs a img:hover {
+	filter: none;
+	transform: scale(1.1);
+}
+
+/********************************
+TABLES
+*********************************/
+
+.spy,
+.user-list {
+	width: 100%;
+}
+
+.spy td,
+.user-list td {
+	font-family: sans-serif;
+	font-size: 0.75em;
+	text-align: center;
+	padding: 5px;
+	background: #f6f7ff;
+}
+
+.spy th, 
+.user-list th {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	background: #2d2d2d;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+.pie {
+	text-align: center;
+}
+
+
+/********************************
+ANIMATIONS
+*********************************/
+
+
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+@keyframes rotate_text {
+    0% {
+        -webkit-transform: rotate(-1.2deg) scale(1);
+    }
+    50% {
+        -webkit-transform: rotate(1deg) scale(1.1);
+    }
+    100% {
+        -webkit-transform: rotate(-1.2deg) scale(1);
+    }
+    
+}
+
+/********************************
+MEDIA
+*********************************/
+
+
+@media only screen and (max-width: 1080px) {
+	
+	body {
+		background: white;
+		font-size: 25px;
+	}
+
+	header {
+		margin-top: 100px;
+		background: url('5.jpg') center 20%;
+		background-size: cover;
+	}
+	.pendos-menu {
+		display: none;
+	}
+	.pendos {
+		font-size: 3.5em;
+	}
+	.bar {
+		height: 100px;
+		border-width: 10px;
+	}
+	.header-content {
+		width:100%;
+		display: flex;
+		flex-direction: row;
+	}
+	.pendosteam-logo {
+		margin: 0 auto 0 15px;
+		height: 100px;
+		width: 100px;
+	}
+	.top-nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-right: 15px;
+	}
+	.top-nav li {
+		margin-right: 50px;
+	}
+	.main-wrapper {
+		margin: 0;
+		width:100%;
+	}
+	.body-wrapper {
+		margin-bottom: 200px;
+	}
+	.regform input {
+		border-width: 0.1em;
+	}
+	.regform input, .regform label {
+		font-size: 2.5em;
+	}
+	.regform input[type="Submit"] {
+		padding: 10px 0;
+		width:100%;
+	}
+	
+	.labs {
+		width: 100%;
+	}
+
+	.tablelab {
+		position: fixed;
+		bottom: 0;
+		z-index: 999;
+	}
+	
+	.right, .left {
+		margin: 0 auto;
+		padding: 35px 5%;
+		float:none;
+		display: block;
+		width: 90%;
+		height: auto;
+	}
+}
